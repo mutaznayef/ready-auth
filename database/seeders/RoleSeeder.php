@@ -13,6 +13,7 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        Role::create(['auth_code' => 'admin', 'name' => 'System Administrator']);
+        $role =    Role::create(['auth_code' => 'admin', 'name' => 'System Administrator']);
+        $role->givePermissionTo('user:create');
     }
 }

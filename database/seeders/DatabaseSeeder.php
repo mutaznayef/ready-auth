@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
 
         $adminUser->assignRole('admin');
 
+
         $adminUser->givePermissionTo([
             'user:create',
             'permission:create'
